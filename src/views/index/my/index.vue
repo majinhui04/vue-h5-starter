@@ -1,8 +1,5 @@
 <template>
     <div class="page IndexMy">
-        <!-- <van-nav-bar title="我的" class="navbar">
-            <div slot="right"><span>完成</span></div>
-        </van-nav-bar> -->
         <div class="navbar">
             <div class="left">&nbsp;</div>
             <div class="headline">
@@ -14,14 +11,14 @@
         </div>
         <div class="body">
             <div class="site-list">
-                <div class="site-item">
+                <div class="site-item" @click="$redirect('/add')">
                     <div class="icon icon-add"></div>
                     <div class="title">添加导航</div>
                 </div>
                 <div
                     :class="{ edit: isEdit }"
                     class="site-item"
-                    v-for="(item, index) in dataList"
+                    v-for="(item, index) in favorite"
                     @click="handleSelect(item)"
                     :key="index"
                 >
@@ -34,152 +31,62 @@
             </div>
         </div>
         <div class="placeholder" style="height:50px"></div>
-        <div class="footer" v-show="isEdit">
-            <div class="action">全选</div>
-            <div class="action">删除</div>
+        <div class="footer my-footer" v-show="isEdit">
+            <div class="action" @click="handleToggleAll">
+                {{ isAll ? '反选' : '全选' }}
+            </div>
+            <div class="action" @click="handleDelete">删除</div>
         </div>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
     name: 'IndexMy',
     components: {},
     data() {
         return {
-            isEdit: false,
-            dataList: [
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: 'facebook',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                    link: 'http://www.facebook.com'
-                },
-                {
-                    selected: false,
-                    title: '这是标题',
-                    icon:
-                        'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                    link: 'www.facebook.com'
-                }
-            ]
+            // 是否全选
+            isAll: false,
+            isEdit: false
         };
     },
-    computed: {},
+    computed: {
+        ...mapState({
+            favorite: state => state.site.favorite
+        })
+    },
     watch: {},
     created() {},
     mounted() {},
     methods: {
-        handleSelectAll(action) {
-            this.dataList.forEach(item => {
-                item.selected = action;
+        handleSelect(item) {
+            if (this.isEdit) {
+                item.selected = !item.selected;
+            } else {
+                location.href = item.link;
+            }
+        },
+        handleToggleAll() {
+            this.isAll = !this.isAll;
+            this.favorite.forEach(item => {
+                item.selected = this.isAll;
             });
         },
-        handleSelect(item) {
-            item.selected = !item.selected;
+        handleDelete() {
+            const result = this.favorite.filter(item => item.selected);
+            console.log(1111, result);
+            this.$store.commit('site/RemoveFavorite', result);
         },
         handleEdit() {
             console.log('1', this.isEdit);
 
+            if (!this.isEdit) {
+                this.favorite.forEach(item => {
+                    this.$set(item, 'selected', false);
+                });
+            }
             this.isEdit = !this.isEdit;
         }
     }
@@ -190,11 +97,11 @@ export default {
 .IndexMy {
     .footer {
         position: fixed;
-        height: 50px;
         width: 375px;
         margin: 0 auto;
         left: 0;
         bottom: 50px;
+        right: 0;
         border-top: 1px solid #ddd;
         background-color: #fff;
         z-index: 99;
@@ -203,6 +110,7 @@ export default {
         .action {
             flex: 1;
             text-align: center;
+            height: 50px;
             line-height: 50px;
         }
     }

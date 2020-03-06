@@ -20,12 +20,12 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
 
 const store = new Vuex.Store({
     modules,
-    getters
-    // plugins: [
-    //     createPersistedState({
-    //         storage: window.localStorage
-    //     })
-    // ]
+    getters,
+    plugins: [
+        createPersistedState({
+            storage: window.localStorage
+        })
+    ]
 });
 
 export default store;

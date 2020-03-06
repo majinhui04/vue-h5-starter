@@ -12,7 +12,6 @@ import messages from '@/i18n';
 import store from '@/store';
 const locale = 'zh-cn'; // zh-cn or en-us
 Vue.use(VueI18n);
-
 const i18n = new VueI18n({
     locale, // 设置地区
     messages // 设置地区信息

@@ -1,0 +1,65 @@
+{
+    "error": 0,
+    "msg": "",
+    "data": [
+      {
+        "classify": "常用网址",
+        "items": [
+          {
+            "id":"1",
+            "title": "facebook1111",
+            "icon": "http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png",
+            "link": "http://www.baidu.com"
+          },
+          {
+            "id":"2",
+            "title": "这是标题",
+            "icon": "http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png",
+            "link": "www.facebook.com"
+          },
+          {
+            "id":"3",
+            "title": "这是标题",
+            "icon": "http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png",
+            "link": "www.facebook.com"
+          },
+          {
+            "id":"4",
+            "title": "这是标题",
+            "icon": "http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png",
+            "link": "www.facebook.com"
+          },
+          {
+            "id":"5",
+            "title": "这是标题",
+            "icon": "http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png",
+            "link": "www.facebook.com"
+          },
+          {
+            "id":"6",
+            "title": "这是标题11",
+            "icon": "http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png",
+            "link": "www.facebook.com"
+          }
+        ]
+      },
+      {
+        "classify": "福利网址",
+        "items": [
+          {
+            "id":"7",
+            "title": "facebook",
+            "icon": "http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png",
+            "link": "http://www.facebook.com"
+          },
+          {
+            "id":"8",
+            "title": "这是标题",
+            "icon": "http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png",
+            "link": "www.facebook.com"
+          }
+        ]
+      }
+    ],
+    "apk_url": "下载链接"
+  }

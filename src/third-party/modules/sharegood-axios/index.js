@@ -21,9 +21,6 @@ const http = new Request({
     // 请求前
     beforeRequest({ url, payload = {}, meta = {} }) {
         payload.auth = {
-            channel: 'h5_test',
-            uid: 145,
-            token: 'QVjHGckiNLMHBpwiEIoeAYQjrHFFVUaC'
         };
         payload.info = payload.info || {};
         console.log(`开始请求${url},请求参数:${JSON.stringify(payload)}`);

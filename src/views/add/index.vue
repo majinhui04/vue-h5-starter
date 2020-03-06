@@ -1,9 +1,17 @@
 <template>
     <div class="page Add">
-        <div class="navbar">
-            <div class="left">返回</div>
+        <div class="navbar white">
+            <div class="left" @click="$goBack">
+                <img
+                    src="~@/assets/img/icon/icon_tianjia_fanhui@2x.png"
+                    alt=""
+                    class="arrow"
+                    width="10px"
+                />
+                <span>返回</span>
+            </div>
             <div class="headline">
-                <span class="font-18">添加导航</span>
+                <span class="font-18"></span>
             </div>
             <div class="right"></div>
         </div>
@@ -11,7 +19,7 @@
             <div class="block-list">
                 <div
                     class="block-item"
-                    v-for="(data, index) in dataList"
+                    v-for="(data, index) in recommend"
                     :key="index"
                 >
                     <div class="block-item-head">
@@ -28,24 +36,28 @@
                                     <img :src="item.icon" alt="" />
                                 </div>
                                 <div class="title">{{ item.title }}</div>
-                                <div class="add"></div>
+                                <div
+                                    class="add"
+                                    @click="handleToggleAdd(item)"
+                                    :class="handleCheckStatus(item)"
+                                ></div>
                             </div>
                         </div>
                     </div>
-                    <div class="block-item-foot">
+                    <!-- <div class="block-item-foot">
                         <div class="action">查看更多</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
         <div class="footer">
-            <div class="action">自定义添加</div>
+            <div class="action" @click="handleShowForm">自定义添加</div>
         </div>
         <van-popup
             v-model="show"
             closeable
             position="bottom"
-            :style="{ height: '60%' }"
+            :style="{ height: '50%' }"
         >
             <van-form @submit="onSubmit" class="add-form">
                 <van-field
@@ -54,7 +66,6 @@
                     name="title"
                     label=""
                     placeholder="请输入网址"
-                    :rules="[{ required: true, message: '请输入网址' }]"
                 />
                 <van-field
                     size="large"
@@ -62,10 +73,15 @@
                     name="link"
                     label=""
                     placeholder="请输入网站名称"
-                    :rules="[{ required: true, message: '请输入网站名称' }]"
                 />
                 <div style="margin: 16px;">
-                    <van-button round block type="info" native-type="submit">
+                    <van-button
+                        round
+                        block
+                        type="info"
+                        native-type="submit"
+                        :disabled="!valid"
+                    >
                         确定添加
                     </van-button>
                 </div>
@@ -75,6 +91,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
     name: 'Add',
     components: {},
@@ -82,76 +99,93 @@ export default {
         return {
             title: '',
             link: '',
-            show: true,
-            dataList: [
-                {
-                    classify: '常用网址',
-                    items: [
-                        {
-                            title: 'facebook',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                            link: 'http://www.facebook.com'
-                        },
-                        {
-                            title: '这是事实上题',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                            link: 'www.facebook.com'
-                        },
-                        {
-                            title: '这是事实上题',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                            link: 'www.facebook.com'
-                        }
-                    ]
-                },
-                {
-                    classify: '福利网址',
-                    items: [
-                        {
-                            title: 'facebook',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/1e553325-5532-4d17-99f3-6a04f867f24b.png',
-                            link: 'http://www.facebook.com'
-                        },
-                        {
-                            title: '这是标题',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                            link: 'www.facebook.com'
-                        },
-                        {
-                            title: '这是标题',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                            link: 'www.facebook.com'
-                        },
-                        {
-                            title: '这是标题',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                            link: 'www.facebook.com'
-                        },
-                        {
-                            title: '这是标题',
-                            icon:
-                                'http://34.209.57.245:3366/img/icon/3c76a05b-12ba-4eea-a09f-3718a45c787e.png',
-                            link: 'www.facebook.com'
-                        }
-                    ]
-                }
-            ]
+            show: false,
+            dataList: []
         };
     },
-    computed: {},
+    computed: {
+        ...mapState({
+            recommend: state => state.site.recommend,
+            favorite: state => state.site.favorite
+        }),
+        valid() {
+            if (this.title && this.link) {
+                console.log('123');
+
+                return true;
+            } else {
+                return false;
+            }
+        },
+        sites() {
+            if (this.recommend) {
+                const result = [];
+                this.recommend
+                    .map(item => item.items)
+                    .forEach(item => {
+                        result.push(...item);
+                    });
+                console.log('sites', result);
+
+                return result;
+            } else {
+                return [];
+            }
+        }
+    },
     watch: {},
-    created() {},
+    created() {
+        this.syncData();
+    },
     mounted() {},
     methods: {
+        handleShowForm() {
+            this.title = '';
+            this.link = '';
+            this.show = true;
+        },
+        handleCheckStatus(item) {
+            const sites = this.favorite;
+            const result = sites.filter(site => site.id === item.id);
+
+            if (result.length) {
+                return 'remove';
+            } else {
+                return '';
+            }
+        },
+        handleToggleAdd(item) {
+            const result = this.favorite.filter(site => site.id === item.id);
+            if (!result.length) {
+                console.log('add');
+                this.$store.commit('site/AddFavorite', item);
+            } else {
+                console.log('remove');
+                this.$store.commit('site/RemoveFavorite', item);
+            }
+            console.log('handleToggleAdd', item);
+        },
         onSubmit(values) {
-            console.log('submit', values);
+            const icon = require('@/assets/img/icon/icon_logo_default@2x.png');
+            const item = {
+                id: +new Date(),
+                icon,
+                ...values
+            };
+            this.$store.commit('site/AddFavorite', item);
+            this.show = false;
+            console.log('submit', item);
+        },
+        syncData() {
+            this.$store
+                .dispatch('site/SyncRecommendData')
+                .then(list => {
+                    console.log('res1', list);
+                    this.activeName = list[0].classify;
+                })
+                .catch(err => {
+                    console.error(err);
+                });
         }
     }
 };
@@ -187,7 +221,7 @@ export default {
         bottom: 0;
         z-index: 10;
         background-color: #fff;
-        border-top: 1px solid #ddd;
+        box-shadow: 0px -4px 8px 0px rgba(240, 240, 240, 1);
         height: 88px;
 
         .flexbox(align-center justify-center);
@@ -229,6 +263,10 @@ export default {
                 background: url('~@/assets/img/icon/btn_tanjia_normal_tanjia@2x.png')
                     no-repeat;
                 background-size: cover;
+
+                &.remove {
+                    background-image: url('~@/assets/img/icon/btn_tanjia_selected_tanjia@2x.png');
+                }
             }
 
             .icon {

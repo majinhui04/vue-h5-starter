@@ -10,7 +10,7 @@ body {
 }
 
 [v-cloak] {
-    display: none
+    display: none;
 }
 
 .navbar {
@@ -19,17 +19,42 @@ body {
     margin: 0 auto;
     left: 0;
     top: 0;
+    right: 0;
     z-index: 99;
-    height: 50px;
+    color: #fff;
     padding: 0 12px;
-    background-color: #6865F0;
+    background-color: #6865f0;
+    height: 50px;
     .flexbox(align-center);
-    color: #FFF;
+    .wrap {
+        color: #fff;
+        padding: 0 12px;
+        background-color: #6865f0;
+        height: 50px;
+        .flexbox(align-center);
+    }
+
+    &.white {
+        background-color: #fff;
+        color: #333;
+        .wrap {
+            background-color: #fff;
+            color: #333;
+        }
+    }
 
     .left,
     .right {
         width: 60px;
         text-align: center;
+    }
+
+    .left {
+        .arrow {
+            margin-right: 7px;
+        }
+
+        .flexbox(align-center);
     }
 
     .headline {
@@ -77,7 +102,6 @@ body {
         width: 25%;
         margin-bottom: 12px;
 
-
         &.edit {
             .icon::after {
                 content: ' ';
@@ -107,9 +131,6 @@ body {
             background-size: cover;
             z-index: 12;
             display: none;
-
-
-
         }
 
         .add {
@@ -117,7 +138,8 @@ body {
             margin-top: 7px;
             width: 46px;
             height: 18px;
-            background: url('~@/assets/img/icon/btn_tanjia_normal_tanjia@2x.png') no-repeat;
+            background: url('~@/assets/img/icon/btn_tanjia_normal_tanjia@2x.png')
+                no-repeat;
             background-size: cover;
         }
 
@@ -148,8 +170,6 @@ body {
     }
 }
 
-
-
 .icon-add {
     background: url('~@/assets/img/icon/add.png') no-repeat;
     background-size: cover;
@@ -161,17 +181,51 @@ body {
     .block-item-head {
         padding-left: 7px;
         margin-left: 10px;
+        font-weight: bold;
     }
 
     .block-item-foot {
         padding: 15px;
         text-align: center;
     }
-
 }
 
 .van-button--info {
     color: #fff;
-    background-color: #6865F0;
-    border: 1px solid #6865F0;
+    background-color: #6865f0;
+    border: 1px solid #6865f0;
+}
+
+.share-dialog {
+    .van-dialog__confirm {
+        background-color: #6865f0;
+        color: #fff;
+    }
+
+    .van-dialog__cancel {
+        color: #333;
+        background-color: rgba(246, 246, 246, 1);
+    }
+}
+// @supports (bottom: env(safe-area-inset-bottom)) {
+//     .xx {
+//         padding-bottom: constant(safe-area-inset-bottom);
+//         padding-bottom: env(safe-area-inset-bottom);
+//     }
+// }
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .van-tabbar {
+        padding-bottom: constant(safe-area-inset-bottom) !important;
+        padding-bottom: env(safe-area-inset-bottom) !important;
+    }
+    .Index {
+        > .body {
+            padding-bottom: constant(safe-area-inset-bottom) !important;
+            padding-bottom: env(safe-area-inset-bottom) !important;
+        }
+    }
+    .my-footer {
+        bottom: calc(50px + constant(safe-area-inset-bottom)) !important;
+        bottom: calc(50px + env(safe-area-inset-bottom)) !important;
+    }
 }

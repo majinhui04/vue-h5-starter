@@ -1,11 +1,13 @@
 <template>
     <div class="page Index">
+        <div style="height:50px;"></div>
         <div class="body">
             <keep-alive>
                 <router-view v-if="$route.meta.keepAlive"></router-view>
             </keep-alive>
             <router-view v-if="!$route.meta.keepAlive"></router-view>
         </div>
+        <div style="height:50px;"></div>
         <van-tabbar
             v-model="active"
             active-color="#6865F0"
@@ -39,20 +41,20 @@ export default {
                 {
                     label: '导航',
                     to: '/index/home',
-                    active: require('./assets/img/tab_selected_daohang@2x.png'),
-                    inactive: require('./assets/img/tab_daohang@2x.png')
+                    active: require('@/assets/img/icon/tab_selected_daohang@2x.png'),
+                    inactive: require('@/assets/img/icon/tab_daohang@2x.png')
                 },
                 {
                     label: '我的',
                     to: '/index/my',
-                    active: require('./assets/img/tab_selected_wpd@2x.png'),
-                    inactive: require('./assets/img/tab_normal_wod@2x.png')
+                    active: require('@/assets/img/icon/tab_selected_wpd@2x.png'),
+                    inactive: require('@/assets/img/icon/tab_normal_wod@2x.png')
                 },
                 {
                     label: '分享',
                     to: '/index/share',
-                    active: require('./assets/img/tab_normal_fenxiang@2x.png'),
-                    inactive: require('./assets/img/tab_normal_fenxiang@2x.png')
+                    active: require('@/assets/img/icon/tab_selected_fenxiang@2x.png'),
+                    inactive: require('@/assets/img/icon/tab_normal_fenxiang@2x.png')
                 }
             ],
             active: 0
@@ -77,11 +79,9 @@ export default {
 
 <style lang="less">
 .Index {
-    padding: 50px 0;
     > .body {
-        height: 100%;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        // overflow-y: auto;
+        // -webkit-overflow-scrolling: touch;
     }
 }
 </style>
