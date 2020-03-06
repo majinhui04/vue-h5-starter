@@ -1,0 +1,1 @@
+import '@/third-party/modules/sharegood-assets/styles/main.less';

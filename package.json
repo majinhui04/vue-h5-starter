@@ -1,0 +1,85 @@
+{
+    "name": "vue-h5-starter",
+    "version": "1.0.0",
+    "description": "",
+    "author": "jinhui.m <504397517@qq.com>",
+    "scripts": {
+        "precommit": "npm run lint-staged",
+        "prettier": "prettier --write ./**/*.{js,json,md}",
+        "eslint": "eslint .",
+        "eslint:fix": "eslint . --fix",
+        "lint-staged": "lint-staged",
+        "dev": "npm run serve",
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "build:test": "vue-cli-service build --mode test",
+        "build:style": "vue-cli-service build --style",
+        "report": "npm run build --report",
+        "new": "plop",
+        "view": "plop view"
+    },
+    "keywords": [
+        "sharegood"
+    ],
+    "license": "MIT",
+    "readmeFilename": "README.md",
+    "dependencies": {
+        "axios": "0.19.0",
+        "babel-plugin-component": "^1.1.1",
+        "babel-polyfill": "^6.26.0",
+        "lib-flexible": "^0.3.2",
+        "postcss-pxtorem": "^4.0.1",
+        "prettier": "^1.19.1",
+        "vant": "2.5.2",
+        "vue": "2.6.11",
+        "vue-i18n": "^8.15.4",
+        "vue-infinite-loading": "^2.4.4",
+        "vue-lazyload": "^1.3.3",
+        "vue-router": "3.0.6",
+        "vuex": "3.1.2",
+        "vuex-persistedstate": "^2.7.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/register": "^7.0.0",
+        "@vue/cli-plugin-babel": "^3.7.0",
+        "@vue/cli-plugin-eslint": "^3.7.0",
+        "@vue/cli-service": "^3.7.0",
+        "@vue/eslint-config-standard": "^4.0.0",
+        "babel-eslint": "^10.0.1",
+        "chalk": "^2.4.1",
+        "chokidar": "^2.1.5",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "husky": "^1.0.1",
+        "less": "3.10.3",
+        "less-loader": "4.1.0",
+        "lint-staged": "^7.3.0",
+        "mockjs": "^1.0.1-beta3",
+        "plop": "^2.4.0",
+        "style-resources-loader": "^1.3.3",
+        "terser-webpack-plugin": "^1.3.0",
+        "vue-template-compiler": "2.6.11",
+        "webpack-bundle-analyzer": "^3.6.0",
+        "yamljs": "^0.3.0"
+    },
+    "lint-staged": {
+        "**/*.js": [
+            "eslint --fix",
+            "prettier --write",
+            "git add"
+        ],
+        "**/*.{md,json}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "engines": {
+        "node": ">=8.9",
+        "npm": ">= 3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}

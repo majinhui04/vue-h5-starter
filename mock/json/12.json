@@ -1,0 +1,90 @@
+{
+    "error": 0,
+    "msg": "",
+    "data": [
+        {
+            "bid": 14,
+            "cid": 278,
+            "title": "roommate",
+            "author": "R",
+            "score": "8.9",
+            "ctitle": "第1话",
+            "cover": "http://cdn.eyassx.com/0/b769aa91-76e1-41d4-9c42-3f9fc7c37ce9.data",
+            "datetime": "2020-02-29 09:51:05",
+            "last_title": "第108话（完结）",
+            "update": false
+        },
+        {
+            "bid": 1926,
+            "cid": 51472,
+            "title": "哥哥的秘书",
+            "author": "洪班长",
+            "score": "8.9",
+            "ctitle": "第1话",
+            "cover": "http://cdn.eyassx.com/0/e9584776-26ff-4b0b-aec1-034fa70a2e9a.data",
+            "datetime": "2020-02-28 16:36:51",
+            "last_title": "第32话（完结）",
+            "update": false
+        },
+        {
+            "bid": 2304,
+            "cid": 62760,
+            "title": "爱徒",
+            "author": "林巨星",
+            "score": "9.2",
+            "ctitle": "第2话",
+            "cover": "http://cdn.eyassx.com/0/8fbdb883-5540-4950-82fd-2bb04bb2aa59.data",
+            "datetime": "2020-02-28 16:34:06",
+            "last_title": "第15话",
+            "update": false
+        },
+        {
+            "bid": 16,
+            "cid": 396,
+            "title": "偷窥",
+            "author": "REC",
+            "score": "9.9",
+            "ctitle": "第31话",
+            "cover": "http://cdn.eyassx.com/0/f437592f-65e3-45e5-9072-64d6a4736ded.data",
+            "datetime": "2020-02-28 00:10:12",
+            "last_title": "第162话",
+            "update": false
+        },
+        {
+            "bid": 2154,
+            "cid": 63609,
+            "title": "玩转女上司",
+            "author": "哈士奇小子",
+            "score": "9.4",
+            "ctitle": "第29话",
+            "cover": "http://cdn.eyassx.com/0/8d5ab295-4c89-4a0d-8c26-20d41b34d131.data",
+            "datetime": "2020-02-27 19:49:34",
+            "last_title": "第31话",
+            "update": false
+        },
+        {
+            "bid": 2305,
+            "cid": 62780,
+            "title": "新闻主播",
+            "author": "husky team  勇次郎",
+            "score": "9.4",
+            "ctitle": "第1话",
+            "cover": "http://cdn.eyassx.com/0/25d28d6e-ff4e-4574-abd6-c24384ccf88a.data",
+            "datetime": "2020-02-27 19:43:43",
+            "last_title": "第16话",
+            "update": false
+        },
+        {
+            "bid": 1475,
+            "cid": 24380,
+            "title": "超级作弊器",
+            "author": "KKUNINSANE",
+            "score": "9.4",
+            "ctitle": "第1话",
+            "cover": "http://cdn.eyassx.com/0/9e1e1616-4a9f-4bff-88cd-9932945b1c60.data",
+            "datetime": "2020-02-27 19:42:16",
+            "last_title": "第132话（完结）",
+            "update": false
+        }
+    ]
+}

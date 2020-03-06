@@ -1,0 +1,123 @@
+{
+    "error": 0,
+    "msg": "",
+    "data": [
+        {
+            "bid": 2304,
+            "title": "爱徒",
+            "cover": "http://cdn.eyassx.com/0/8fbdb883-5540-4950-82fd-2bb04bb2aa59.data",
+            "score": "9.2",
+            "author": "林巨星",
+            "cid": 62760,
+            "ctitle": "第2话",
+            "index": 2,
+            "last_title": "第15话",
+            "update": false,
+            "total_count": 15
+        },
+        {
+            "bid": 2154,
+            "title": "玩转女上司",
+            "cover": "http://cdn.eyassx.com/0/8d5ab295-4c89-4a0d-8c26-20d41b34d131.data",
+            "score": "9.4",
+            "author": "哈士奇小子",
+            "cid": 63609,
+            "ctitle": "第29话",
+            "index": 29,
+            "last_title": "第31话",
+            "update": false,
+            "total_count": 31
+        },
+        {
+            "bid": 2305,
+            "title": "新闻主播",
+            "cover": "http://cdn.eyassx.com/0/25d28d6e-ff4e-4574-abd6-c24384ccf88a.data",
+            "score": "9.4",
+            "author": "husky team  勇次郎",
+            "cid": 62780,
+            "ctitle": "第1话",
+            "index": 1,
+            "last_title": "第16话",
+            "update": false,
+            "total_count": 16
+        },
+        {
+            "bid": 16,
+            "title": "偷窥",
+            "cover": "http://cdn.eyassx.com/0/f437592f-65e3-45e5-9072-64d6a4736ded.data",
+            "score": "9.9",
+            "author": "REC",
+            "cid": 396,
+            "ctitle": "第31话",
+            "index": 31,
+            "last_title": "第162话",
+            "update": false,
+            "total_count": 162
+        },
+        {
+            "bid": 1573,
+            "title": "风雪姻缘",
+            "cover": "http://cdn.eyassx.com/0/e841de7b-66fc-4141-8a3f-bb8a833271cc.data",
+            "score": "7.7",
+            "author": "禹熙",
+            "cid": 30789,
+            "ctitle": "第1话 左志登场多多指教！（上）",
+            "index": -1,
+            "last_title": "第30话 银色手刃（下）",
+            "update": false,
+            "total_count": 30
+        },
+        {
+            "bid": 1571,
+            "title": "暗杀天使",
+            "cover": "http://cdn.eyassx.com/0/7443eb42-fbf6-4177-addf-344605174607.data",
+            "score": "6.8",
+            "author": "正宗刀",
+            "cid": 30701,
+            "ctitle": "第1话 第一小分队",
+            "index": -1,
+            "last_title": "第46话(中) 饥饿的安德烈",
+            "update": false,
+            "total_count": 46
+        },
+        {
+            "bid": 1569,
+            "title": "厨神",
+            "cover": "http://cdn.eyassx.com/0/db7be45f-2e69-44d7-a1c3-faa9deada4f6.data",
+            "score": "6.6",
+            "author": "洋蔥",
+            "cid": 30633,
+            "ctitle": "第1话 【食神英雄帖】",
+            "index": -1,
+            "last_title": "第51话 【退一步海阔天空】-下",
+            "update": false,
+            "total_count": 51
+        },
+        {
+            "bid": 1560,
+            "title": "魂兽昊天",
+            "cover": "http://cdn.eyassx.com/0/29440c6d-470e-4ce2-b034-2e7ecfefabec.data",
+            "score": "8.5",
+            "author": "WSBN",
+            "cid": 30254,
+            "ctitle": "第1话(1) 遇",
+            "index": -1,
+            "last_title": "第94话(1) 鸳鸯浴什么的最污嘞",
+            "update": false,
+            "total_count": 94
+        },
+        {
+            "bid": 1470,
+            "title": "黑钢神犬",
+            "cover": "http://cdn.eyassx.com/0/168d64bf-a84d-4a1c-b58e-2aaa4cc13fe1.data",
+            "score": "8.2",
+            "author": "狎語",
+            "cid": 23850,
+            "ctitle": "第1话",
+            "index": -1,
+            "last_title": "第64话",
+            "update": false,
+            "total_count": 64
+        }
+    ]
+}

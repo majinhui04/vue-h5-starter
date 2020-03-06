@@ -1,0 +1,14 @@
+/* eslint-disable */
+const {{ properCase name }} = () => import(/* webpackChunkName: "{{ properCase name }}" */ '@/views/{{ name }}');
+export default {
+path: '/{{ formatPath name }}',
+name: '{{ properCase name }}',
+component: {{ properCase name }},
+    meta: {
+        parent: '{{ properCase parent }}',
+        rank: 10,
+        title: '{{ title }}',
+        auth: false,
+        keepAlive: {{ keepAlive }}
+    }
+};

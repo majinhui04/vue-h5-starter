@@ -1,0 +1,208 @@
+{
+    "error": 0,
+    "msg": "",
+    "data": [
+        {
+            "id": 278,
+            "title": "第1话",
+            "cover": "http://cdn.eyassx.com/112722/70c3ef53-07fc-4b34-90b8-f873bcfbe4bc.data",
+            "price": 0,
+            "tyj": false,
+            "datetime": "06-01",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 279,
+            "title": "第2话",
+            "cover": "http://cdn.eyassx.com/112723/52863363-ec1c-4726-9987-dabbc5af6d11.data",
+            "price": 0,
+            "tyj": false,
+            "datetime": "06-02",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 280,
+            "title": "第3话",
+            "cover": "http://cdn.eyassx.com/112738/16c13c3e-52a1-4bcf-938c-ac6525eb0d65.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-03",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 281,
+            "title": "第4话",
+            "cover": "http://cdn.eyassx.com/112739/0cb599e0-a9a2-420c-b467-9dcc79c6c034.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-04",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 282,
+            "title": "第5话",
+            "cover": "http://cdn.eyassx.com/112748/a4f7d649-6da1-45e5-9f6c-01dc686e2659.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-05",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 283,
+            "title": "第6话",
+            "cover": "http://cdn.eyassx.com/112755/c683e794-118c-427a-893f-9b514e930db4.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-06",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 284,
+            "title": "第7话",
+            "cover": "http://cdn.eyassx.com/112761/6a5c52d2-1d02-488f-b20c-90600063a956.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-07",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 285,
+            "title": "第8话",
+            "cover": "http://cdn.eyassx.com/112762/d367f69e-039f-44cc-9d64-b4d21b4760fd.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-08",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 286,
+            "title": "第9话",
+            "cover": "http://cdn.eyassx.com/112783/dfc04821-2b2c-48d3-a0b6-79cecfa02b0b.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-09",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 287,
+            "title": "第10话",
+            "cover": "http://cdn.eyassx.com/112784/9efe2b4c-fbeb-42dd-bb5b-188331346f5f.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-10",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 288,
+            "title": "第11话",
+            "cover": "http://cdn.eyassx.com/112796/eca6342b-1562-4837-92ea-07ec7df2e788.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-11",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 289,
+            "title": "第12话",
+            "cover": "http://cdn.eyassx.com/112797/8d89bc9d-b83c-47ec-bd9e-bd4cc8c666d4.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-12",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 290,
+            "title": "第13话",
+            "cover": "http://cdn.eyassx.com/112819/5f4dad8b-e344-4e38-9633-43276346b044.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-13",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 291,
+            "title": "第14话",
+            "cover": "http://cdn.eyassx.com/112820/549aaecd-f729-4b1f-9c33-ad8a4b87c82a.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-14",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 292,
+            "title": "第15话",
+            "cover": "http://cdn.eyassx.com/112832/f14817b5-5b7f-48e1-b1e4-f8e003592711.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-15",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 293,
+            "title": "第16话",
+            "cover": "http://cdn.eyassx.com/112836/5d692fa9-872e-41de-83bb-0adc7565aa2f.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-16",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 294,
+            "title": "第17话",
+            "cover": "http://cdn.eyassx.com/112878/aaf7d883-b577-4d3c-84e3-608ba3a5a8c2.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-17",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 295,
+            "title": "第18话",
+            "cover": "http://cdn.eyassx.com/112891/13806422-ff0a-4095-a79d-01aa45d9b31d.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-18",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 296,
+            "title": "第19话",
+            "cover": "http://cdn.eyassx.com/112892/c80d223f-059d-464a-80b1-fed2edb5e985.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-19",
+            "buyed": false,
+            "read": false
+        },
+        {
+            "id": 297,
+            "title": "第20话",
+            "cover": "http://cdn.eyassx.com/112909/f14169a6-87b7-4135-82b1-a019878fa313.data",
+            "price": 80,
+            "tyj": false,
+            "datetime": "06-20",
+            "buyed": false,
+            "read": false
+        }
+    ],
+    "title": "roommate",
+    "ie_end": true
+}

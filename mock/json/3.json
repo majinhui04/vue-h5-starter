@@ -1,0 +1,469 @@
+{
+    "error": 0,
+    "msg": "",
+    "banner": [
+        {
+            "src": "https://manhua.qpic.cn/operation/0/27_00_10_67bc820632e1cd7544fb2651adc071ce_1582733407647.jpg/0",
+            "img": "http://cdn.eyassx.com/banner/563461de-b463-4d5b-851a-75cb322851d4.data",
+            "url": "-cartoon-route-v1://rechargeVip"
+        },
+        {
+            "src": "https://manhua.qpic.cn/operation/0/27_00_10_a43d5028559db6c9bf11fc63c93726a2_1582733406448.jpeg/0",
+            "img": "http://cdn.eyassx.com/banner/06a0d73e-82d4-4485-aa58-b907705e67bd.data",
+            "url": "-cartoon-route-v1://cartoonCover?id=2321"
+        },
+        {
+            "src": "https://manhua.qpic.cn/operation/0/27_00_10_cbe242ef18fd350b1488779a52df676b_1582733407456.jpg/0",
+            "img": "http://cdn.eyassx.com/banner/d66220c8-d080-4ca7-8a28-1eac56eaee93.data",
+            "url": "-cartoon-route-v1://cartoonCover?id=2187"
+        },
+        {
+            "src": "https://manhua.qpic.cn/operation/0/27_00_10_67bc820632e1cd7544fb2651adc071ce_1582733407647.jpg/0",
+            "img": "http://cdn.eyassx.com/banner/fcb3d8e5-20d3-4856-8854-0054727bed38.data",
+            "url": "-cartoon-route-v1://cartoonCover?id=2192"
+        }
+    ],
+    "recommend": [
+        {
+            "id": 174,
+            "title": "必看精品",
+            "template": 1,
+            "change": true,
+            "maxPage": 6,
+            "books": [
+                {
+                    "id": 1475,
+                    "title": "超级作弊器",
+                    "author": "KKUNINSANE",
+                    "score": "9.4",
+                    "url": "https://manhua.qpic.cn/operation/0/05_15_45_153005789b1e80791398b91bd86ca013_1572939929505.jpg/0",
+                    "cover": "http://cdn.eyassx.com/0/9e1e1616-4a9f-4bff-88cd-9932945b1c60.data"
+                },
+                {
+                    "id": 2027,
+                    "title": "Run away",
+                    "author": "Rangrari",
+                    "score": "7.7",
+                    "cover": "http://cdn.eyassx.com/0/21e38467-1a64-4bf6-b18c-9a47ae53d536.data"
+                },
+                {
+                    "id": 2047,
+                    "title": "暴徒",
+                    "author": "HM",
+                    "score": "7.7",
+                    "cover": "http://cdn.eyassx.com/0/51a1fb40-e4a2-4722-ae54-b1e54af7f8a7.data"
+                },
+                {
+                    "id": 2109,
+                    "title": "朋友妻",
+                    "author": "哈士奇小子",
+                    "score": "8.0",
+                    "cover": "http://cdn.eyassx.com/0/76eab151-187a-4a0e-8630-e2e792695e0e.data"
+                },
+                {
+                    "id": 2179,
+                    "title": "邻家三姐妹",
+                    "author": "Semney  Rodong",
+                    "score": "8.0",
+                    "cover": "http://cdn.eyassx.com/0/ba0a75d1-a229-470c-b5ea-a006ace92561.data"
+                },
+                {
+                    "id": 2226,
+                    "title": "朋友的姐姐",
+                    "author": "Sean Kim  鍾普林",
+                    "score": "8.5",
+                    "cover": "http://cdn.eyassx.com/0/779ac706-b2cd-4976-93cd-fcf44fda2095.data"
+                }
+            ]
+        },
+        {
+            "id": 260,
+            "title": "最新上架",
+            "template": 1,
+            "change": false,
+            "banner_img": "http://cdn.eyassx.com/banner/ddfa5c06-aabf-4caa-9b9f-99552b73f3b8.data",
+            "banner_url": "-cartoon-route-v1://rechargeVip",
+            "books": [
+                {
+                    "id": 2231,
+                    "title": "兄妹关系",
+                    "author": "Irun  草莓味橘子",
+                    "score": "8.9",
+                    "cover": "http://cdn.eyassx.com/0/6a5c65fd-906c-4315-a2b0-84b9f373205b.data"
+                },
+                {
+                    "id": 2232,
+                    "title": "实习老师",
+                    "author": "90s magazine  背景助手",
+                    "score": "9.1",
+                    "cover": "http://cdn.eyassx.com/0/3765140d-c274-495d-8150-c791c2c6a566.data"
+                },
+                {
+                    "id": 2233,
+                    "title": "爱情店到店",
+                    "author": "老大  金蓮",
+                    "score": "9.4",
+                    "cover": "http://cdn.eyassx.com/0/74ed0e96-4e89-4c49-b3f3-a4ebdbedb00d.data"
+                },
+                {
+                    "id": 2303,
+                    "title": "正妹小主管",
+                    "author": "雲河尹",
+                    "score": "8.8",
+                    "cover": "http://cdn.eyassx.com/0/f964f32e-14d2-448b-8347-2f4ae8a9ad73.data"
+                },
+                {
+                    "id": 2304,
+                    "title": "爱徒",
+                    "author": "林巨星",
+                    "score": "9.2",
+                    "cover": "http://cdn.eyassx.com/0/8fbdb883-5540-4950-82fd-2bb04bb2aa59.data"
+                },
+                {
+                    "id": 2305,
+                    "title": "新闻主播",
+                    "author": "husky team  勇次郎",
+                    "score": "9.4",
+                    "cover": "http://cdn.eyassx.com/0/25d28d6e-ff4e-4574-abd6-c24384ccf88a.data"
+                }
+            ]
+        },
+        {
+            "id": 263,
+            "title": "本周热搜",
+            "template": 1,
+            "change": false,
+            "books": [
+                {
+                    "id": 2168,
+                    "title": "别人的老婆",
+                    "author": "Tula  塔蘭",
+                    "score": "7.7",
+                    "cover": "http://cdn.eyassx.com/0/22baad24-e67b-4cf3-9a75-e2a9ea6f3e14.data"
+                },
+                {
+                    "id": 2170,
+                    "title": "失控的爱",
+                    "author": "TB Production",
+                    "score": "7.8",
+                    "cover": "http://cdn.eyassx.com/0/0a8d90d8-d253-4cd9-b49e-3ff74f933b1c.data"
+                },
+                {
+                    "id": 2171,
+                    "title": "隔壁母女",
+                    "author": "劉勝裴",
+                    "score": "7.4",
+                    "cover": "http://cdn.eyassx.com/0/bcfed4fd-76e7-44c4-9252-1fa9066ec57e.data"
+                },
+                {
+                    "id": 2217,
+                    "title": "新媳妇",
+                    "author": "湖水  矮冬瓜  贞焕",
+                    "score": "9.1",
+                    "cover": "http://cdn.eyassx.com/0/ea370cac-1b50-4131-9fad-e61f7e45702a.data"
+                },
+                {
+                    "id": 2224,
+                    "title": "秘密教学",
+                    "author": "美娜赞  钢铁王",
+                    "score": "9.1",
+                    "cover": "http://cdn.eyassx.com/0/b07a42e9-f150-41e3-8d3a-c688ac721e47.data"
+                },
+                {
+                    "id": 2241,
+                    "title": "亲爱的大叔",
+                    "author": "F-set  硕知",
+                    "score": "8.9",
+                    "cover": "http://cdn.eyassx.com/0/b3ad73fc-79cf-497f-a776-b90e6b6fdd05.data"
+                }
+            ]
+        },
+        {
+            "id": 334,
+            "title": "小编推荐",
+            "template": 4,
+            "change": false,
+            "book_list": [
+                {
+                    "id": 4,
+                    "title": "小姨子驯服手册",
+                    "banner": "http://cdn.eyassx.com/banner/29b077f4-4b19-41a3-96e2-136e57f47cf3.data"
+                },
+                {
+                    "id": 5,
+                    "title": "不伦之恋",
+                    "banner": "http://cdn.eyassx.com/banner/a63239fa-63ff-4316-92ae-5f4d804f1ca4.data"
+                },
+                {
+                    "id": 6,
+                    "title": "最爱姐妹花",
+                    "banner": "http://cdn.eyassx.com/banner/0c674531-712b-49e1-abde-c706cee340d0.data"
+                },
+                {
+                    "id": 7,
+                    "title": "万物皆可调教",
+                    "banner": "http://cdn.eyassx.com/banner/e942a8c4-f42e-4b18-9f41-bb4ba3c70eb6.data"
+                },
+                {
+                    "id": 8,
+                    "title": "野外丛生",
+                    "banner": "http://cdn.eyassx.com/banner/eebbe1a0-6689-48e1-8832-77a7456864a9.data"
+                }
+            ]
+        },
+        {
+            "id": 291,
+            "title": "日漫推荐",
+            "template": 1,
+            "change": false,
+            "books": [
+                {
+                    "id": 2300,
+                    "title": "光洁肌肤（艳肌）【日漫】",
+                    "author": "Gyuo",
+                    "score": "6.6",
+                    "cover": "http://cdn.eyassx.com/0/898dfd91-bdba-4cba-b12b-11469981dd9f.data"
+                },
+                {
+                    "id": 2301,
+                    "title": "继父和哥哥【日漫】",
+                    "author": "Oliver",
+                    "score": "7.5",
+                    "cover": "http://cdn.eyassx.com/0/0358f33e-b375-4f83-b79c-5a9a9a050c00.data"
+                },
+                {
+                    "id": 2302,
+                    "title": "家中的保卫员【日漫】",
+                    "author": "PArt",
+                    "score": "5.7",
+                    "cover": "http://cdn.eyassx.com/0/30c7ef4a-fc76-473d-b352-19f80b0511b7.data"
+                },
+                {
+                    "id": 2307,
+                    "title": "x爱Robot莉莉【日漫】",
+                    "author": "LSD",
+                    "score": "6.6",
+                    "cover": "http://cdn.eyassx.com/0/5a172ae3-ea91-47d8-8e6f-ef1ac8c02c77.data"
+                },
+                {
+                    "id": 2308,
+                    "title": "少女裹路地【日漫】",
+                    "author": "Buku",
+                    "score": "7.3",
+                    "cover": "http://cdn.eyassx.com/0/2fa361e2-eedd-46c3-b414-2c1752e78719.data"
+                },
+                {
+                    "id": 2309,
+                    "title": "儿子的同学【日漫】",
+                    "author": "MK",
+                    "score": "6.4",
+                    "cover": "http://cdn.eyassx.com/0/bf3e845d-f79e-4ff9-9dc1-6106c904af75.data"
+                }
+            ]
+        },
+        {
+            "id": 304,
+            "title": "五折特惠",
+            "template": 1,
+            "change": false,
+            "books": [
+                {
+                    "id": 1958,
+                    "title": "赤红之堂",
+                    "author": "戏言跟班的弟子",
+                    "score": "8.0",
+                    "cover": "http://cdn.eyassx.com/0/1c74e956-5d8a-4451-bc04-dec105685be7.data"
+                },
+                {
+                    "id": 1964,
+                    "title": "红杏出墙",
+                    "author": "Art",
+                    "score": "9.1",
+                    "cover": "http://cdn.eyassx.com/0/ff5f4950-99c4-42f6-ae18-9868b6d50c08.data"
+                },
+                {
+                    "id": 1965,
+                    "title": "蝴蝶之梦",
+                    "author": "疾风",
+                    "score": "8.6",
+                    "cover": "http://cdn.eyassx.com/0/a43223f4-4896-40f2-8d90-0445f7419bd6.data"
+                },
+                {
+                    "id": 2123,
+                    "title": "重考生",
+                    "author": "柚子",
+                    "score": "8.0",
+                    "cover": "http://cdn.eyassx.com/0/9679134d-5bda-4227-a6de-34db6e7f7796.data"
+                },
+                {
+                    "id": 2132,
+                    "title": "下女,初希",
+                    "author": "海韵",
+                    "score": "7.6",
+                    "cover": "http://cdn.eyassx.com/0/19fba51a-d79a-473f-b174-2791ade58aa4.data"
+                },
+                {
+                    "id": 2138,
+                    "title": "姐妹与继父",
+                    "author": "外星人",
+                    "score": "7.7",
+                    "cover": "http://cdn.eyassx.com/0/10090810-5245-4e85-9410-ec898e9f621f.data"
+                }
+            ]
+        },
+        {
+            "id": 176,
+            "title": "连载更新",
+            "template": 1,
+            "change": true,
+            "banner_img": "http://cdn.eyassx.com/banner/d0d00856-3a5b-4d46-ab46-e1351cc616c9.data",
+            "banner_url": "-cartoon-route-v1://cartoonCover?id=2180",
+            "maxPage": 3,
+            "books": [
+                {
+                    "id": 1422,
+                    "title": "乌托邦游戏",
+                    "author": "zhaoxiu",
+                    "score": "8.6",
+                    "cover": "http://cdn.eyassx.com/0/f836770f-73f1-448c-913e-7e6b37e0b7a7.data"
+                },
+                {
+                    "id": 1927,
+                    "title": "共享情人",
+                    "author": "敏英",
+                    "score": "8.9",
+                    "cover": "http://cdn.eyassx.com/0/9ca494e5-7b41-4331-99c3-7a07aef97780.data"
+                },
+                {
+                    "id": 2043,
+                    "title": "站立女人",
+                    "author": "韩漫丝",
+                    "score": "7.1",
+                    "cover": "http://cdn.eyassx.com/0/0ee41540-fc90-4691-841d-db6326e5442c.data"
+                },
+                {
+                    "id": 2050,
+                    "title": "老婆的闺蜜",
+                    "author": "哈士奇小子",
+                    "score": "8.0",
+                    "cover": "http://cdn.eyassx.com/0/484c7568-ba29-46b3-b350-c0d62bbbb883.data"
+                },
+                {
+                    "id": 2108,
+                    "title": "朋友,女朋友",
+                    "author": "柳极兆",
+                    "score": "7.1",
+                    "cover": "http://cdn.eyassx.com/0/6d35c461-4279-4679-b3d4-3d15641b1543.data"
+                },
+                {
+                    "id": 2168,
+                    "title": "别人的老婆",
+                    "author": "Tula  塔蘭",
+                    "score": "7.7",
+                    "cover": "http://cdn.eyassx.com/0/22baad24-e67b-4cf3-9a75-e2a9ea6f3e14.data"
+                }
+            ]
+        },
+        {
+            "id": 175,
+            "title": "精彩完结",
+            "template": 1,
+            "change": true,
+            "maxPage": 6,
+            "books": [
+                {
+                    "id": 186,
+                    "title": "调教家政妇",
+                    "author": "yinci",
+                    "score": "8.6",
+                    "cover": "http://cdn.eyassx.com/0/6a005edf-ec2f-430b-abe4-9b09393ed915.data"
+                },
+                {
+                    "id": 1424,
+                    "title": "租赁女友",
+                    "author": "DC屁U",
+                    "score": "8.6",
+                    "cover": "http://cdn.eyassx.com/0/c346338d-e056-4160-b473-e9d13cde2fb6.data"
+                },
+                {
+                    "id": 1815,
+                    "title": "我的秘密炮友",
+                    "author": "崔恩夕",
+                    "score": "8.3",
+                    "cover": "http://cdn.eyassx.com/0/e6e94b35-3628-47af-94f7-277ed38d12c0.data"
+                },
+                {
+                    "id": 1861,
+                    "title": "熟女的滋味",
+                    "author": "空心菜",
+                    "score": "8.0",
+                    "cover": "http://cdn.eyassx.com/0/9a49cb9f-a83c-41ac-ada8-300a4da358b2.data"
+                },
+                {
+                    "id": 2077,
+                    "title": "生物学的女性攻略法",
+                    "author": "SIHWA",
+                    "score": "7.2",
+                    "cover": "http://cdn.eyassx.com/0/53becf93-4b08-49ef-8b32-eb2730b174ec.data"
+                },
+                {
+                    "id": 2161,
+                    "title": "租爱套房",
+                    "author": "ssaem",
+                    "score": "6.6",
+                    "cover": "http://cdn.eyassx.com/0/23fd8d3a-83d2-4bd6-ad0a-4dab85381e1d.data"
+                }
+            ]
+        },
+        {
+            "id": 309,
+            "title": "体验券专区",
+            "template": 1,
+            "change": false,
+            "books": [
+                {
+                    "id": 1938,
+                    "title": "男公关与富家女",
+                    "author": "湿妃",
+                    "score": "8.4",
+                    "cover": "http://cdn.eyassx.com/0/4048c114-4c4c-4340-a213-899b8cdec2fc.data"
+                },
+                {
+                    "id": 1961,
+                    "title": "关系",
+                    "author": "comicson",
+                    "score": "8.6",
+                    "cover": "http://cdn.eyassx.com/0/30b0665f-8dc0-44c2-b931-864efa982486.data"
+                },
+                {
+                    "id": 1980,
+                    "title": "初恋陷阱",
+                    "author": "牛油果",
+                    "score": "8.9",
+                    "cover": "http://cdn.eyassx.com/0/9ee48f2a-b455-4281-b845-c16250c4097e.data"
+                },
+                {
+                    "id": 2115,
+                    "title": "同居捉迷藏",
+                    "author": "林巨星/SUN",
+                    "score": "7.1",
+                    "cover": "http://cdn.eyassx.com/0/431ff6e7-4ab6-4e1f-98b2-fd0417476e3b.data"
+                },
+                {
+                    "id": 2139,
+                    "title": "金钱与女人",
+                    "author": "金鸿泰",
+                    "score": "7.4",
+                    "cover": "http://cdn.eyassx.com/0/8c3ec6f8-582f-4981-8934-79ea113f0ab6.data"
+                },
+                {
+                    "id": 2153,
+                    "title": "你劈腿了吗",
+                    "author": "LSD",
+                    "score": "7.0",
+                    "cover": "http://cdn.eyassx.com/0/f3d3486d-57f0-4936-86ce-1adb79387644.data"
+                }
+            ]
+        }
+    ]
+}

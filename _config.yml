@@ -1,0 +1,24 @@
+# 站点配置
+sites:
+    index:
+        title: '收藏夹'
+        template: 'public/index.html'
+    style:
+      title: 'style'
+      template: 'public/index.html'
+
+# 打包输出目录
+outputDir: 'dist'
+publicPath: '/'
+
+# 开发配置
+open: true
+port: 8901
+proxy:
+    baseUrl: '/api'
+    # targetUrl: 'http://34.209.57.245:3366/AppGatewayH5.ashx'
+
+## 自定义环境变量
+env:
+    APP_TS: '1'
+# Deployment
