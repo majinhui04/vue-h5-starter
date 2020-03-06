@@ -1,14 +1,15 @@
 /* eslint-disable */
-const Index = () => import(/* webpackChunkName: "Index" */ '@/views/index');
+const Index = () => import( /* webpackChunkName: "Index" */ '@/views/index');
 export default {
-path: '/',
-name: 'Index',
-component: Index,
+    path: '/',
+    name: 'Index',
+    component: Index,
     meta: {
         parent: '',
-        rank: 10,
+        rank: 1,
         title: '',
         auth: false,
-        keepAlive: false
+        keepAlive: false,
+        aliveOnlyBack: false
     }
 };
