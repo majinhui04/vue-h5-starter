@@ -67,4 +67,3 @@ const API = http.toAPI({
 
 Vue.prototype.$axios = http;
 Vue.prototype.$api = API;
-Vue.prototype.$fetchImg = axios;
