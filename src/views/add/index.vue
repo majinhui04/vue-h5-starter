@@ -13,7 +13,16 @@
             <div class="headline">
                 <span class="font-18"></span>
             </div>
-            <div class="right"></div>
+            <div class="right">
+                <van-button
+                    block
+                    type="info"
+                    size="mini"
+                    class="add-site-btn"
+                    @click="handleShowForm"
+                    >自定义添加</van-button
+                >
+            </div>
         </div>
         <div class="body">
             <div class="block-list">
@@ -51,7 +60,7 @@
             </div>
         </div>
         <div class="footer">
-            <div class="action" @click="handleShowForm">自定义添加</div>
+            <div class="action" @click="$goBack">关闭</div>
         </div>
         <van-popup
             v-model="show"
@@ -158,9 +167,11 @@ export default {
             const result = this.favorite.filter(site => site.id === item.id);
             if (!result.length) {
                 console.log('add');
+                this.$Toast('已添加至导航');
                 this.$store.commit('site/AddFavorite', item);
             } else {
                 console.log('remove');
+                this.$Toast('已从导航移除');
                 this.$store.commit('site/RemoveFavorite', item);
             }
             console.log('handleToggleAdd', item);
@@ -174,6 +185,7 @@ export default {
             };
             this.$store.commit('site/AddFavorite', item);
             this.show = false;
+            history.go(-1);
             console.log('submit', item);
         },
         syncData() {
@@ -193,8 +205,13 @@ export default {
 
 <style lang="less">
 .Add {
-    padding-top: 50px;
     padding-bottom: 88px;
+
+    .add-site-btn {
+        width: auto;
+        padding: 3px 7px;
+        line-height: 1;
+    }
 
     .add-form {
         padding-top: 50px;
@@ -222,17 +239,14 @@ export default {
         z-index: 10;
         background-color: #fff;
         box-shadow: 0px -4px 8px 0px rgba(240, 240, 240, 1);
-        height: 88px;
-
+        height: 56px;
         .flexbox(align-center justify-center);
 
         .action {
-            width: 347px;
-            height: 48px;
-            background: rgba(104, 101, 240, 1);
-            border-radius: 24px;
+            height: 100%;
+            // background: rgba(104, 101, 240, 1);
             font-size: 16px;
-            color: #fff;
+            color: #333;
             .flexbox(align-center justify-center);
         }
     }

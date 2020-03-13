@@ -16,7 +16,8 @@
         "build:style": "vue-cli-service build --style",
         "report": "npm run build --report",
         "new": "plop",
-        "view": "plop view"
+        "view": "plop view",
+        "deploy": "sh ./build/deploy.sh -T 139.224.3.200 -d /usr/webapp/sharegood-bookmark/dist"
     },
     "keywords": [
         "sharegood"

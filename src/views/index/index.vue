@@ -1,6 +1,5 @@
 <template>
     <div class="page Index">
-        <div style="height:50px;"></div>
         <div class="body">
             <keep-alive>
                 <router-view v-if="$route.meta.keepAlive"></router-view>

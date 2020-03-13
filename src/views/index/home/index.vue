@@ -2,7 +2,7 @@
     <div class="page IndexHome">
         <div class="navbar">
             <div
-                class="title"
+                class="tab-item"
                 @click="handleChangeTab(tab)"
                 v-for="(tab, index) in recommend"
                 :key="index"
