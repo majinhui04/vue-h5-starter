@@ -35,11 +35,15 @@ const mutations = {
 };
 
 const actions = {
-    SyncRecommendData({commit}, data = {opt: 1}) {
+    SyncRecommendData({
+        commit
+    }, data = {
+        opt: 1
+    }) {
         return API.gateway(data).then(res => {
             const result = res.data || [];
             commit('SetRecommendData', result)
-            return result;
+            return res;
         })
     }
 };

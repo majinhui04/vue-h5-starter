@@ -13,6 +13,83 @@ body {
     display: none;
 }
 
+.notify-popup {
+    background-color: transparent;
+}
+
+.notify-tip {
+    position: relative;
+    .flexbox(align-center);
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 60px;
+    background: #fff;
+    border-radius: 10px;
+
+    .arrow {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-top: 10px solid #fff;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        background: url('~@/assets/img/logo.png') no-repeat;
+        background-size: cover;
+    }
+
+    .info {
+        .flexbox(align-center);
+        text-align: center;
+        flex: 1;
+        margin-left: 10px;
+    }
+}
+
+.notification {
+    height: 50px;
+    .flexbox(align-center);
+    padding: 0 12px;
+    background-color: #fff;
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        background: url('~@/assets/img/logo.png') no-repeat;
+        background-size: cover;
+    }
+
+    .info {
+        flex: 1;
+    }
+
+    .btn {
+        margin-left: 10px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 12px;
+        background-color: #6865f0;
+        .flexbox(align-center justify-around);
+    }
+
+    .close {
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+        background: url('~@/assets/img/icon/close.png') no-repeat;
+        background-size: cover;
+    }
+}
+
 .navbar {
     position: relative;
     width: 375px;
@@ -23,6 +100,7 @@ body {
     background-color: #6865f0;
     height: 50px;
     .flexbox(align-center justify-around);
+
     .wrap {
         color: #fff;
         padding: 0 12px;
@@ -34,6 +112,7 @@ body {
     &.white {
         background-color: #fff;
         color: #333;
+
         .wrap {
             background-color: #fff;
             color: #333;
@@ -59,6 +138,7 @@ body {
         text-align: center;
         font-size: 16px;
     }
+
     .tab-item {
         position: relative;
         color: rgba(255, 255, 255, 0.5);
@@ -66,6 +146,7 @@ body {
         height: 50px;
         line-height: 50px;
         text-align: center;
+
         &.active {
             color: rgba(255, 255, 255, 1);
 
@@ -74,6 +155,7 @@ body {
             }
         }
     }
+
     .title {
         color: rgba(255, 255, 255, 0.5);
         width: 80%;
@@ -151,8 +233,7 @@ body {
             margin-top: 7px;
             width: 46px;
             height: 18px;
-            background: url('~@/assets/img/icon/btn_tanjia_normal_tanjia@2x.png')
-                no-repeat;
+            background: url('~@/assets/img/icon/btn_tanjia_normal_tanjia@2x.png') no-repeat;
             background-size: cover;
         }
 
@@ -220,6 +301,7 @@ body {
         background-color: rgba(246, 246, 246, 1);
     }
 }
+
 // @supports (bottom: env(safe-area-inset-bottom)) {
 //     .xx {
 //         padding-bottom: constant(safe-area-inset-bottom);
@@ -231,12 +313,14 @@ body {
         padding-bottom: constant(safe-area-inset-bottom) !important;
         padding-bottom: env(safe-area-inset-bottom) !important;
     }
+
     .Index {
-        > .body {
+        >.body {
             padding-bottom: constant(safe-area-inset-bottom) !important;
             padding-bottom: env(safe-area-inset-bottom) !important;
         }
     }
+
     .my-footer {
         bottom: calc(50px + constant(safe-area-inset-bottom)) !important;
         bottom: calc(50px + env(safe-area-inset-bottom)) !important;

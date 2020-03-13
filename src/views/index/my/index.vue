@@ -65,7 +65,11 @@ export default {
             if (this.isEdit) {
                 item.selected = !item.selected;
             } else {
-                location.href = item.link;
+                const link =
+                    item.link.indexOf('http') > -1
+                        ? item.link
+                        : `http://${item.link}`;
+                location.href = link;
             }
         },
         handleToggleAll() {

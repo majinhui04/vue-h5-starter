@@ -1,5 +1,33 @@
 <template>
     <div class="page IndexHome">
+        <div class="notification" v-if="tip">
+            <div class="logo"></div>
+            <div class="info"></div>
+            <div class="btn" @click="showTip" v-if="!isAndroid">
+                添加到主屏幕
+            </div>
+            <a class="btn" :href="apk_url" v-if="isAndroid">下载APP </a>
+            <div class="close" @click="handleRemove"></div>
+        </div>
+        <van-popup
+            v-model="show"
+            position="bottom"
+            :style="{ height: '70px' }"
+            class="notify-popup"
+        >
+            <div class="notify-tip">
+                <div class="logo"></div>
+                <div class="info">
+                    请轻点<img
+                        width="20"
+                        src="~@/assets/img/icon/share.png"
+                        alt=""
+                    />
+                    ，然后点击”添加到主屏幕”
+                </div>
+                <div class="arrow"></div>
+            </div>
+        </van-popup>
         <div class="navbar">
             <div
                 class="tab-item"
@@ -42,6 +70,10 @@ export default {
     components: {},
     data() {
         return {
+            isAndroid: false,
+            apk_url: '',
+            tip: true,
+            show: false,
             activeName: '',
             tabList: []
         };
@@ -61,12 +93,23 @@ export default {
     },
     watch: {},
     created() {
+        const u = navigator.userAgent;
+        const isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+        if (isAndroid) {
+            this.isAndroid = true;
+        }
         this.syncData();
     },
     mounted() {
         console.log('1', this.recommend);
     },
     methods: {
+        handleRemove() {
+            this.tip = false;
+        },
+        showTip() {
+            this.show = true;
+        },
         handleRedirect(link) {
             location.href = link;
         },
@@ -76,8 +119,9 @@ export default {
         syncData() {
             this.$store
                 .dispatch('site/SyncRecommendData')
-                .then(list => {
-                    console.log('res1', list);
+                .then(res => {
+                    const list = res.data || [];
+                    console.log('res1222', res, res.apk_url);
 
                     this.activeName = list[0].classify;
                 })

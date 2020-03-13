@@ -71,15 +71,15 @@
             <van-form @submit="onSubmit" class="add-form">
                 <van-field
                     size="large"
-                    v-model="title"
-                    name="title"
+                    v-model="link"
+                    name="link"
                     label=""
                     placeholder="请输入网址"
                 />
                 <van-field
                     size="large"
-                    v-model="link"
-                    name="link"
+                    v-model="title"
+                    name="title"
                     label=""
                     placeholder="请输入网站名称"
                 />
@@ -178,10 +178,17 @@ export default {
         },
         onSubmit(values) {
             const icon = require('@/assets/img/icon/icon_logo_default@2x.png');
+            const title = values.title;
+            const link =
+                values.link.indexOf('http') > -1
+                    ? values.link
+                    : `http://${values.link}`;
+            console.log(111, title, link);
             const item = {
                 id: +new Date(),
                 icon,
-                ...values
+                link,
+                title
             };
             this.$store.commit('site/AddFavorite', item);
             this.show = false;
@@ -191,8 +198,8 @@ export default {
         syncData() {
             this.$store
                 .dispatch('site/SyncRecommendData')
-                .then(list => {
-                    console.log('res1', list);
+                .then(res => {
+                    const list = res.data;
                     this.activeName = list[0].classify;
                 })
                 .catch(err => {
