@@ -40,7 +40,9 @@ const actions = {
     }, data = {
         opt: 1
     }) {
-        return API.gateway(data).then(res => {
+        return API.gateway(data, {
+            $loading: true
+        }).then(res => {
             const result = res.data || [];
             commit('SetRecommendData', result)
             return res;

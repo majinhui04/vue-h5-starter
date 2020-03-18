@@ -4,21 +4,36 @@ sites:
         title: '收藏夹'
         template: 'public/index.html'
     style:
-      title: 'style'
-      template: 'public/index.html'
+        title: 'style'
+        template: 'public/index.html'
 
-# 打包输出目录
-outputDir: 'dist'
-publicPath: '/'
+webpack:
+    outputDir: 'dist'
+    # 静态资源根目录 '/''
+    publicPath: '/'
+    productionSourceMap: false
+    lintOnSave: false
 
-# 开发配置
-open: true
-port: 8901
+devServer:
+    port: 8901
+    # 自动打开浏览器
+    open: true
+# vue.config.js
+
 proxy:
     baseUrl: '/api'
-    # targetUrl: 'http://34.209.57.245:3366/AppGatewayH5.ashx'
+    targetUrl: 'http://34.209.57.245:3366/AppGatewayH5.ashx'
 
-## 自定义环境变量
-env:
-    APP_TS: '1'
 # Deployment
+qiniu:
+    domain: 'http://cdn.qiniu.barebear.cn/'
+    # 七牛秘钥
+    accessKey: 'GvyPnYmgRQ9wn_Jh2Xt_C8JWyawjD65MVVCXgAz8'
+    secretKey: '88aQaNLylG8d5bCrxYD8v8FQChSV3M5EvgKMdDav'
+    # 七牛空间名
+    bucket: 'barebear'
+    # 七牛目录名称（前缀）
+    prefix: 'sharegood-cartoon'
+
+deploy:
+    publicPath: 'http://cdn.qiniu.barebear.cn/sharegood-cartoon/'

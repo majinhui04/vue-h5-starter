@@ -17,7 +17,10 @@
         "report": "npm run build --report",
         "new": "plop",
         "view": "plop view",
-        "deploy": "sh ./build/deploy.sh -T 139.224.3.200 -d /usr/webapp/sharegood-bookmark/dist"
+        "deploy": "sh ./build/deploy.sh -T 139.224.3.200 -d /usr/webapp/sharegood-bookmark/dist",
+        "deploy2": "sh ./build/deploy.sh -T 54.184.26.59 -d /usr/webapp/sharegood-bookmark/dist",
+        "nginx:copy": "scp root@54.184.26.59:/etc/nginx/nginx.conf .",
+        "qiniu": "node build/qiniu.js"
     },
     "keywords": [
         "sharegood"
@@ -29,9 +32,12 @@
         "babel-plugin-component": "^1.1.1",
         "babel-polyfill": "^6.26.0",
         "clipboard": "^2.0.6",
+        "colors": "^1.4.0",
         "lib-flexible": "^0.3.2",
         "postcss-pxtorem": "^4.0.1",
         "prettier": "^1.19.1",
+        "qiniu": "^7.3.0",
+        "qrcode": "^1.4.4",
         "vant": "2.5.2",
         "vue": "2.6.11",
         "vue-i18n": "^8.15.4",

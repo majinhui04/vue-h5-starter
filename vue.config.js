@@ -1,4 +1,5 @@
 const path = require('path');
+const pkg = require('./package.json');
 const merge = require('webpack-merge');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
     .BundleAnalyzerPlugin;
@@ -8,15 +9,14 @@ const _config = YAML.load('./_config.yml');
 const glob = require('glob');
 const pages = {};
 const sites = _config.sites;
-const {
-    port,
-    proxy
-} = _config;
+_config.date = new Date().toString();
+_config.version = pkg.version;
 
 function resolve(dir) {
     return path.join(__dirname, dir);
 }
-
+const port = _config.devServer.port;
+const proxy = _config.proxy;
 const isProd = process.env.NODE_ENV === 'production';
 const targetUrl = proxy.targetUrl || `http://localhost:${port}/mock`;
 console.log('VUE_APP_BASE_TARGET:::', targetUrl);
@@ -56,15 +56,19 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
         title: sites[chunk].title
     };
 });
-if (process.env.npm_config_style) {
-    delete pages.index;
+let webpackConfig = {
+    ..._config.webpack
+};
+// 打包
+if (isProd) {
+    webpackConfig = {
+        ..._config.webpack,
+        ..._config.deploy
+    };
 }
 module.exports = {
     pages,
-    outputDir: 'dist',
-    publicPath: '/',
-    productionSourceMap: false,
-    lintOnSave: false,
+    ...webpackConfig,
     configureWebpack: config => {
         if (isProd) {
             // externals里的模块不打包
@@ -105,7 +109,8 @@ module.exports = {
          * 单页配置 添加CDN参数到htmlWebpackPlugin配置中， 详见public/index.html 修改
          */
         // 生产环境注入cdn + 多页面
-        Object.keys(pages).forEach(chunk => {
+        glob.sync('./src/pages/**/main.js').forEach(path => {
+            const chunk = path.split('./src/pages/')[1].split('/main.js')[0];
             config.plugin('html-' + chunk).tap(args => {
                 if (process.env.NODE_ENV === 'production') {
                     args[0].cdn = cdn.build;
@@ -156,11 +161,10 @@ module.exports = {
         });
     },
     devServer: {
-        port: port,
+        ..._config.devServer,
         host: '0.0.0.0',
         disableHostCheck: true,
         // 配置自动启动浏览器
-        open: _config.open,
         proxy: {
             // change xxx-api/login => mock/login
             // detail: https://cli.vuejs.org/config/#devserver-proxy

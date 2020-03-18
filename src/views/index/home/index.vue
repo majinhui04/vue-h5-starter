@@ -1,6 +1,6 @@
 <template>
     <div class="page IndexHome">
-        <div class="notification" v-if="tip">
+        <div class="notification" v-if="tip && !isFullScreen">
             <div class="logo"></div>
             <div class="info"></div>
             <div class="btn" @click="showTip" v-if="!isAndroid">
@@ -65,11 +65,13 @@
 
 <script>
 import { mapState } from 'vuex';
+
 export default {
     name: 'IndexHome',
     components: {},
     data() {
         return {
+            isFullScreen: false,
             isAndroid: false,
             apk_url: '',
             tip: true,
@@ -98,6 +100,18 @@ export default {
         if (isAndroid) {
             this.isAndroid = true;
         }
+        if (window.screen.availHeight - window.innerHeight <= 44) {
+            this.isFullScreen = true;
+        }
+
+        console.log(
+            'isFullScreen',
+
+            window.screen.availHeight,
+            window.innerHeight,
+            window.innerWidth
+        );
+
         this.syncData();
     },
     mounted() {

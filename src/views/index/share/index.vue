@@ -3,12 +3,14 @@
         <div class="navbar">
             <div class="left"></div>
             <div class="headline">
-                <span class="font-18">转发分享</span>
+                <span class="font-18">分享转发</span>
             </div>
             <div class="right"></div>
         </div>
         <div class="body">
-            <div class="qrcode mb-12"></div>
+            <div class="qrcode mb-12">
+                <img :src="imgUrl" alt="" v-if="imgUrl" />
+            </div>
             <div class="message font-14 mb-12">
                 <p>扫描上方二维码即可跳转至下载页面</p>
                 <p>（不建议您使用微信扫一扫）</p>
@@ -22,15 +24,22 @@
                     class="mb-12"
                     @click="handleShowDialog"
                 >
+                    <img
+                        src="~@/assets/img/icon/icon_fengxiang_fengxiang@2x.png"
+                        alt=""
+                        width="12"
+                        class="mr-5"
+                        style="vertical-align:middle"
+                    />
                     <span>复制推广链接</span>
                 </van-button>
             </div>
 
-            <div class="message font-12" style="width:254px;">
+            <!-- <div class="message font-12" style="width:254px;">
                 <p>
                     点击“复制推广链接”复制链接后，建议直接去浏览器地址栏处粘贴链接，然后下载软件。
                 </p>
-            </div>
+            </div> -->
         </div>
         <van-dialog
             class="share-dialog"
@@ -40,18 +49,20 @@
             cancelButtonText="再考虑下"
             confirmButtonText="复制链接"
         >
-            <p class="share_info">{{ share_info }}</p>
+            <p class="share_info">{{ share_info }} {{ share_link }}</p>
         </van-dialog>
     </div>
 </template>
 
 <script>
 import ClipboardJS from 'clipboard';
+import QRCode from 'qrcode';
 export default {
     name: 'IndexShare',
     components: {},
     data() {
         return {
+            imgUrl: '',
             share_link: '',
             share_info: '',
             show: false
@@ -80,11 +91,19 @@ export default {
     methods: {
         syncData() {
             this.$api
-                .gateway({ opt: 2 })
+                .gateway({ opt: 2 }, { $loading: true })
                 .then(res => {
                     this.share_info = res.share_info;
                     this.share_link = res.share_link;
                     console.log('res1', res);
+                    QRCode.toDataURL(this.share_link)
+                        .then(url => {
+                            this.imgUrl = url;
+                            console.log(url);
+                        })
+                        .catch(err => {
+                            console.error(err);
+                        });
                 })
                 .catch(err => {
                     console.error(err);
@@ -104,9 +123,17 @@ export default {
         .flexbox(v align-center);
 
         .qrcode {
-            width: 200px;
-            height: 200px;
+            width: 240px;
+            height: 240px;
             background: rgba(216, 216, 216, 1);
+            position: relative;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
         }
         .message {
             text-align: center;
