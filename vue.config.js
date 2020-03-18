@@ -50,11 +50,14 @@ const cdn = {
 };
 glob.sync('./src/pages/**/main.js').forEach(path => {
     const chunk = path.split('./src/pages/')[1].split('/main.js')[0];
-    pages[chunk] = {
-        entry: path,
-        template: sites[chunk].template || 'public/index.html',
-        title: sites[chunk].title
-    };
+    if (sites[chunk]) {
+        pages[chunk] = {
+            entry: path,
+            template: 'public/index.html',
+            apple: 'favicon.png',
+            ...sites[chunk]
+        };
+    }
 });
 let webpackConfig = {
     ..._config.webpack
@@ -77,6 +80,10 @@ module.exports = {
             });
             if (process.env.VUE_APP_MODE === 'production') {
                 config.optimization = {
+                    // 默认命名 连接符
+                    splitChunks: {
+                        automaticNameDelimiter: '.'
+                    },
                     minimizer: [
                         new TerserPlugin({
                             terserOptions: {
@@ -111,15 +118,17 @@ module.exports = {
         // 生产环境注入cdn + 多页面
         glob.sync('./src/pages/**/main.js').forEach(path => {
             const chunk = path.split('./src/pages/')[1].split('/main.js')[0];
-            config.plugin('html-' + chunk).tap(args => {
-                if (process.env.NODE_ENV === 'production') {
-                    args[0].cdn = cdn.build;
-                }
-                if (process.env.NODE_ENV === 'development') {
-                    args[0].cdn = cdn.dev;
-                }
-                return args;
-            });
+            if (sites[chunk]) {
+                config.plugin('html-' + chunk).tap(args => {
+                    if (process.env.NODE_ENV === 'production') {
+                        args[0].cdn = cdn.build;
+                    }
+                    if (process.env.NODE_ENV === 'development') {
+                        args[0].cdn = cdn.dev;
+                    }
+                    return args;
+                });
+            }
         });
         // config.plugin('html').tap(args => {
         //     if (process.env.NODE_ENV === 'production') {
@@ -139,6 +148,7 @@ module.exports = {
         config.resolve.alias.set('@', resolve('src'));
         // 打包文件带hash
         config.output.filename('[name].[hash].js').end();
+        // config.output.chunkFilename('vendors.[contenthash].js').end();
 
         // 为了补删除换行而加的配置
         config.module

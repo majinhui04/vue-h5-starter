@@ -5,13 +5,18 @@ SOURCE="./dist"
 AUTHOR='root'
 TARGET=''
 OUTPUT_DIR='/www/demo'
+FOUCE=0
+ORDER='build'
 # 传参覆盖默认值
 while getopts "m:a:s:u:S:T:r:v:ftd:h" arg; do
   case $arg in
   m)
     # 模式
     MODE=$OPTARG
-    IS_PRODUCTION=0
+    ;;
+  o)
+    # 编译命令
+    ORDER=$OPTARG
     ;;
   a)
     # 作者
@@ -69,23 +74,28 @@ if [ $TARGET = "" ]; then
 fi
 # 判断远程目录
 if ssh ${AUTHOR}@${TARGET} test -e $OUTPUT_DIR; then
-   echo "目录已存在"echo "目录已存在"
+   echo "${OUTPUT_DIR}目录已存在"
 else 
     ssh "${AUTHOR}"@"${TARGET}" "mkdir -p $OUTPUT_DIR"
-    echo "创建目录：$OUTPUT_DIR"    
+    echo "创建目录：${OUTPUT_DIR}"    
 fi
 
-# 开始编译代码
-if [ $IS_PRODUCTION -eq 0 ]; then
-  # 没有设置过则使用默认作者
-  npm run "build:${MODE}"
-else 
-  npm run build
+if [ $FOUCE -eq 1 ] ; then
+    echo '开始编译'
+    # 开始编译代码
+    npm run $ORDER
 fi
 
 # 上传代码
-scp -r "${SOURCE}"/* "${AUTHOR}"@"${TARGET}":"${OUTPUT_DIR}"
-
+#scp -r "${SOURCE}"/* "${AUTHOR}"@"${TARGET}":"${OUTPUT_DIR}"
+# 开始编译代码
+if [ -d $SOURCE ]; then
+  echo "上传目录 ${SOURCE}"
+  scp -r "${SOURCE}"/* "${AUTHOR}"@"${TARGET}":"${OUTPUT_DIR}"
+else 
+    echo "上传文件 ${SOURCE}"
+  scp "${SOURCE}" "${AUTHOR}"@"${TARGET}":"${OUTPUT_DIR}"
+fi
 echo "发布成功：${AUTHOR}@${TARGET}:${OUTPUT_DIR}"
 
 

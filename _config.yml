@@ -1,11 +1,9 @@
 # 站点配置
 sites:
     index:
-        title: '收藏夹'
+        title: '91导航'
         template: 'public/index.html'
-    style:
-        title: 'style'
-        template: 'public/index.html'
+        apple: 'logo.jpg'
 
 webpack:
     outputDir: 'dist'
@@ -36,4 +34,5 @@ qiniu:
     prefix: 'sharegood-cartoon'
 
 deploy:
-    publicPath: 'http://cdn.qiniu.barebear.cn/sharegood-cartoon/'
+    #publicPath: 'http://cdn.qiniu.barebear.cn/sharegood-cartoon/'
+    publicPath: 'http://cdn.eyassx.com/sharegood-bookmark/20200318/'
