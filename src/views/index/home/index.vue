@@ -100,7 +100,10 @@ export default {
         if (isAndroid) {
             this.isAndroid = true;
         }
-        if (window.screen.availHeight - window.innerHeight <= 44) {
+        if (
+            window.screen.availHeight - window.innerHeight <= 44 &&
+            !isAndroid
+        ) {
             this.isFullScreen = true;
         }
 
@@ -136,7 +139,7 @@ export default {
                 .then(res => {
                     const list = res.data || [];
                     console.log('res1222', res, res.apk_url);
-
+                    this.apk_url = res.apk_url;
                     this.activeName = list[0].classify;
                 })
                 .catch(err => {

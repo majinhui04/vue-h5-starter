@@ -35,4 +35,4 @@ qiniu:
 
 deploy:
     #publicPath: 'http://cdn.qiniu.barebear.cn/sharegood-cartoon/'
-    publicPath: 'http://cdn.eyassx.com/sharegood-bookmark/20200318/'
+    publicPath: 'http://cdn.eyassx.com/sharegood-bookmark/20200324/'
