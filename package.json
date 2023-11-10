@@ -24,7 +24,7 @@
     "license": "MIT",
     "readmeFilename": "README.md",
     "dependencies": {
-        "axios": "0.19.0",
+        "axios": "1.6.0",
         "babel-plugin-component": "^1.1.1",
         "babel-polyfill": "^6.26.0",
         "lib-flexible": "^0.3.2",
